@@ -1,0 +1,23 @@
+a{
+    display: inline-block;
+    padding: 16px 8px 1px 24px;
+    border-radius:16px;
+    background-color: lightblue;
+    text-align: left;
+    border: 1px solid lightblue;
+    width: 225px;
+    height: 50px;
+    font-weight:bold;
+    z-index: 1;
+    font-size: 16px;
+    color: Black;
+    text-decoration: none;
+
+}
+h1{
+background-color:skyblue;
+color:Black;
+text-align:center;
+height:50px;
+padding:10px 0px 10px 0px;
+}

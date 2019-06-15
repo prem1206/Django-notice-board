@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Faculty Notices </title>
+</head>
+
+<ul> <ol>
+    {% if  not  user.is_authenticated %}
+    {%for  notice in notices%}
+
+
+
+                <li>{{notice.name}}</li></a>
+                <ul><li style="list-style-type :none;">{{notice.message}}</li>
+  </ul>
+
+                    {% endfor %}
+    <button onclick="location.href='{% url 'home_page' %}'"
+     class="btn btn-primary " align="center"> Back</button>
+                {% else %}
+
+                    {%for  notice in notices%}
+
+
+
+                <li>{{notice.name}}</li></a>
+                <ul><li style="list-style-type :none;">{{notice.message}}</li>
+
+
+                    <button onclick="location.href='{% url 'delete_notices' notice.id %}'"
+                            class="btn btn-primary " align="center">
+                        Delete  this notice</button>
+
+                     <button onclick="location.href='{% url 'update_notices' notice.id %}'"
+                     class="btn btn-primary " align="center"> Update  this notice</button>
+                </ul>
+
+
+    {% endfor %}
+    <br><br>
+      <button onclick="location.href='{% url 'create_notices' %}'"
+      class="btn btn-primary " align="center" > Create New Notices</button>
+
+    <h3> Or </h3>
+
+  <button onclick="location.href='{% url 'home_page' %}'"
+   class="btn btn-primary " align="center">Go to home page</button>
+
+    {%endif %}
+</ol>
+</ul>
+
+</body>
+
+</html>

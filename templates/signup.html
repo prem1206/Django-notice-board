@@ -1,0 +1,38 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register </title>
+</head>
+<body>
+<div class="container">
+      <form style="margin-left: 25px;margin-right:25px; " method="POST"  >
+               {% if form.errors %}
+        <p style="color: red;">
+            Please correct the error{{form.errors|pluralize }} below.
+        </p>
+    {% endif %}
+
+      <h2 style="font-size:36px;">Register</h2>
+
+
+            {% csrf_token %}
+          <br>
+
+          <h6>UserName</h6>{{form.username}} <br><br>
+          <h6>Password</h6>{{form.password}}<br><br>
+          <h6>Confirm Password</h6>{{form.password2}}<br><br>
+          <h6>Email</h6>{{form.email}}<br><br>
+          <h6>Role</h6>{{form.role}}<br><br>
+
+
+ <button onclick="location.href='{% url 'home_page' %}'"class="btn btn-primary ">Create Account</button>
+
+      </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+body:before{
+            content: '';
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            background-image: url("loginback.jpg");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            filter: blur(5px);
+        }
+.container input
+        {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+.container input[type="text"],.container input[type="password"],.container input[type="email"],.container input[type="text"]{
+
+       width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+    height: 40px;
+    outline: none;
+}
+
+input[type="submit"] {
+            height: 30px;
+            color: #fff;
+            font-size: 15px;
+            background: rgba(255, 255, 255, .2);;
+            cursor: pointer;
+            border-radius: 25px;
+            border: none;
+            outline: none;
+            margin-top: 15%;
+}
+
+.container {
+    position: absolute;
+    outline: none;
+    top: 10%;
+    left: 35%;
+    background-color: rgb(86, 128, 233, 0);
+    padding: 80px, 40px;
+    height: 500px ;
+    width: 400px;
+    box-shadow: 10px rgb(86,128,233);
+    border-radius: 20px;
+    border-color: transparent;
+}
+.container h2{
+    text-align: center;
+    font-weight: bold;
+    color: rgba(0, 49, 82, .9);;
+    margin: 15%;
+    padding: 0 0 20px;
+}
+.container p
+        {
+            margin: 1%;
+            padding:1%;
+            font-weight: bold;
+            color: rgba(255, 255, 255, .5);;
+            font-size: 18px;
+
+        }
+.container input
+        {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+.logo{
+            position: absolute;
+            width: 100px;
+            height: 80px;
+            border-radius: 40%;
+            overflow: hidden;
+            top: calc(-80px/2);
+            left: calc(50% - 40px);
+
+
+}
+input[type="checkbox"] {
+            width: 20%;
+        }
+
+::-webkit-input-placeholder {
+   color: rgba(255, 255, 255, .7);
+   font-size:16px;
+}
